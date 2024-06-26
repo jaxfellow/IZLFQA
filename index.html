@@ -10,6 +10,12 @@
 <body>
     <header>
         <h1>الأسئلة الشائعة</h1>
+
+        <form id="search-form" class="search-form" action="javascript:void(0);">
+            <input type="text" id="search-input" class="search-input" placeholder="ابحث عن...">
+            <button type="submit" class="search-button">بحث</button>
+        </form>
+
         <!-- <nav>
             <ul>
                 <li><a href="#category1">معلومات عامة عن الجمعية</a></li>
@@ -21,6 +27,9 @@
             </ul>
         </nav> -->
     </header>
+
+    <!-- Search Results Container -->
+    <div id="search-results" class="search-results"></div>
 
     <main>
         <section id="category1">
@@ -106,6 +115,83 @@
                 </div>
             </div>
         </section>
+        <section id="category7">
+            <h2 class="category-title">لجنة شراء المسجد</h2>
+            <div class="category-content">
+                <div class="faq-item">
+                    <button class="question">من هم لجنة شراء المسجد؟</button>
+                    <div class="answer">
+                        <p>لجنة شراء المسجد تتكون من مجموعة من الأفراد الذين تم اختيارهم بناءً على كفاءتهم وخبرتهم في هذا المجال.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="question">كيف تم اختيارهم؟</button>
+                    <div class="answer">
+                        <p>تم اختيار أعضاء اللجنة بناءً على مجموعة من المعايير التي تضمن كفاءتهم وقدرتهم على تحقيق أهداف المشروع.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="question">هل يمكن الانتساب لهذه اللجنة والعمل معها؟</button>
+                    <div class="answer">
+                        <p>نعم، يمكن الانتساب للجنة والعمل معها من خلال تقديم طلب وانتظار الموافقة.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="question">ماهو مستقبل هذه اللجنة بعد شراء المجمع؟</button>
+                    <div class="answer">
+                        <p>ستستمر اللجنة في العمل على تحقيق أهداف المشروع وضمان استدامته.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="question">ما هو موقف اللجنة بحال لم يتم الاستفادة من المجمع وفق الرؤية التي رُسمت؟</button>
+                    <div class="answer">
+                        <p>ستعمل اللجنة على مراجعة الخطط واتخاذ الإجراءات اللازمة لضمان تحقيق الأهداف.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="question">كيف يتم قياس إنجاز العمل للقائمين على مشروع المجمع؟</button>
+                    <div class="answer">
+                        <p>يتم قياس الإنجاز من خلال معايير أداء محددة وتقارير دورية.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="question">من يضمن عدم انحياز عمل الجمعية عن الأهداف التي تم الاتفاق عليها وما هي الحلول المقترحة لتصحيح المسار؟</button>
+                    <div class="answer">
+                        <p>تتبع الجمعية نظام رقابة داخلي لضمان التزامها بالأهداف، وتوجد آليات لتصحيح المسار عند الحاجة.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="question">هل هناك لجنة داخلية لفض أي نزاع بشكل إيجابي دون اللجوء للمحاكم؟</button>
+                    <div class="answer">
+                        <p>نعم، هناك لجنة داخلية مختصة بفض النزاعات بطريقة إيجابية وودية.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="question">هل سيتم تطوير وتغيير النظام الداخلي للجمعية وفق الرؤية التي وضعتها لجنة شراء المجمع؟</button>
+                    <div class="answer">
+                        <p>نعم، سيتم تطوير النظام الداخلي للجمعية ليتماشى مع الرؤية والأهداف الجديدة.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="question">كيف يتم تقييم عمل أي جمعية تقود هذا المشروع وفق الرؤية المستقبلية؟</button>
+                    <div class="answer">
+                        <p>يتم تقييم عمل الجمعية من خلال تقارير الأداء ومراجعة الأهداف المنجزة مقابل المخطط لها.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="question">هل يمكن وضع خطط سنوية لبناء مشروع المجمع؟</button>
+                    <div class="answer">
+                        <p>نعم، يمكن وضع خطط سنوية لضمان تنفيذ المشروع بشكل مرحلي ومنظم.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="question">من يشارك بوضع الخطط السنوية؟</button>
+                    <div class="answer">
+                        <p>يشارك في وضع الخطط السنوية أعضاء اللجنة والجهات المعنية والمختصين بالمشروع.</p>
+                    </div>
+                </div>
+            </div>
+        </section> 
         <section id="category2">
             <h2 class="category-title">طرق التبرع وحماية الأموال</h2>
             <div class="category-content">
@@ -389,9 +475,10 @@
                 </div>
                 
             </div>
-        </section>        
+        </section>       
     </main>
 
+    <script src="search.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

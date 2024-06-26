@@ -1,0 +1,74 @@
+body {
+    font-family: 'Tajawal', sans-serif;
+    line-height: 1.6;
+    direction: rtl;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    margin: 20px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.category-title {
+    background: #eee;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.category-content {
+    display: none; /* Hidden by default */
+}
+
+.question, .answer {
+    font-family: 'Tajawal', sans-serif; /* Ensure questions and answers use the same font */
+}
+
+.question {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
+}
+
+.answer {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: none;
+    text-align: right;
+}

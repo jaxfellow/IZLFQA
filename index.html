@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الأسئلة الشائعة</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -15,7 +16,6 @@
         <form id="search-form" class="search-form" action="javascript:void(0);">
             <input type="text" id="search-input" class="search-input" placeholder="ابحث عن...">
         </form>
-
         <!-- <nav>
             <ul>
                 <li><a href="#category1">معلومات عامة عن الجمعية</a></li>
@@ -195,21 +195,32 @@
                 <div class="faq-item">
                     <button class="question">ما هي طرق التبرع المتاحة؟</button>
                     <div class="answer">
-                        <p>توفر الجمعية طرقًا متعددة للتبرع، بما في ذلك التبرع عبر الإنترنت، التبرع عبر التحويل البنكي، والتبرعات النقدية في مكاتبنا.</p>
+                        <p>تشمل الطرق المتاحة للتبرع:</p>
+                        <ul>
+                            <li>الدفع نقدًا</li>
+                            <li>عبر <a href="https://paypal.me/assalamluebeck" target="_blank">باي بال</a></li>
+                            <li>باستخدام بطاقة البنك</li>
+                            <li>التبرع بعناصر عينية مثل الذهب</li>
+                            <li>القيام بتحويل بنكي. للتحويل البنكي، يرجى استخدام المعلومات التالية:</li>
+                        </ul>
+                        <p>
+                            <strong>المستلم:</strong> ADKV e.V.<br>
+                            <strong>رقم الحساب المصرفي الدولي (IBAN):</strong> DE25 2305 0101 0026 5225 73
+                        </p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <button class="question">هل يمكنني التبرع بمبالغ صغيرة؟</button>
                     <div class="answer">
                         <p>نعم، يمكنك التبرع بأي مبلغ تراه مناسبًا، بغض النظر عن حجمه.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <button class="question">كيف يتم حماية الحساب البنكي للجمعية؟</button>
                     <div class="answer">
-                        <p>نحن نتخذ إجراءات أمنية صارمة لحماية حساباتنا البنكية، بما في ذلك استخدام أحدث التقنيات للتشفير.</p>
+                        <p>نحن نتخذ إجراءات أمنية صارمة لحماية حساباتنا البنكية، حيث يمكن إيداع الأموال في الحساب بسهولة، ولكن لا يمكن سحب الأموال من الحساب إلا بحضور اثنين من أعضاء مجلس الإدارة المعينين معًا إلى البنك.</p>
                     </div>
                 </div>
                 
@@ -233,14 +244,6 @@
                         <p>نحن نتعامل مع الضرائب وفقًا للتشريعات الضريبية في ألمانيا، ويمكن أن يتم التعرف على المزيد من التفاصيل من خلال استشارة محاسب مختص.</p>
                     </div>
                 </div>
-                
-                <div class="faq-item">
-                    <button class="question">هل يمكن التبرع بأشكال أخرى غير المال؟</button>
-                    <div class="answer">
-                        <p>نعم، بالإضافة إلى التبرعات النقدية، يمكنك التبرع بالذهب، العقارات، أو المعدات الأخرى. يرجى التواصل معنا لمزيد من المعلومات.</p>
-                    </div>
-                </div>
-                
             </div>
         </section>     
         <section id="category3">
@@ -332,13 +335,6 @@
                     <button class="question">كيف سيتم ضمان صيانة المبنى بعد شرائه؟</button>
                     <div class="answer">
                         <p>سيتم تنظيم صيانة دورية للمبنى بواسطة فريق مختص، وسيتم توفير التمويل اللازم لهذا الغرض.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="question">هل يمكنني زيارة المبنى بعد شرائه؟</button>
-                    <div class="answer">
-                        <p>نعم، يمكن للجمهور زيارة المبنى والمشاركة في الأنشطة المتاحة للجميع.</p>
                     </div>
                 </div>
                 
@@ -478,10 +474,11 @@
     <footer>
         <p>إذا كان لديك المزيد من الأسئلة يمكنك التواصل معنا عبر:</p>
         <ul>
-            <li>الهاتف: 00491782950459 </li>
-            <li>موقعنا الإلكتروني: <a href="www.assalam-luebeck.de">www.assalam-luebeck.de</a></li>
-            <li>البريد الإلكتروني: <a href="mailto:info@assalam-luebeck.de">info@assalam-luebeck.de</a></li>
-            <li>فيسبوك: <a href="https://www.facebook.com/profile.php?id=100069552664145" target="_blank">Assalam Moschee Lübeck - مسجد السلام لوبيك</a></li>
+            <li><i class="fas fa-phone-alt"></i> <span dir="ltr">+49 178 2950459</span></li>
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/+491782950459">مسجد السلام لوبيك</a></li>
+            <li><i class="fas fa-globe"></i> <a href="https://www.assalam-luebeck.de" target="_blank">www.assalam-luebeck.de</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:info@assalam-luebeck.de">info@assalam-luebeck.de</a></li>
+            <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/profile.php?id=100069552664145" target="_blank">Assalam Moschee Lübeck - مسجد السلام لوبيك</a></li>
         </ul>
     </footer>
 

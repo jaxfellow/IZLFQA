@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('search-input');
     if (searchInput) {
         function filterFAQ() {
-            let searchValue = searchInput.value.trim().toLowerCase(); // Trim whitespace and convert to lowercase
+            let searchValue = searchInput.value.trim().toLowerCase(); 
             let categories = document.querySelectorAll('section');
             
             categories.forEach(category => {
@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 let categoryMatches = false;
 
                 faqItems.forEach(item => {
-                    let question = item.querySelector('.question').textContent.trim().toLowerCase(); // Trim whitespace and convert to lowercase
-                    let answer = item.querySelector('.answer').textContent.trim().toLowerCase(); // Trim whitespace and convert to lowercase
+                    let question = item.querySelector('.question').textContent.trim().toLowerCase(); 
+                    let answer = item.querySelector('.answer').textContent.trim().toLowerCase(); 
                     let categoryTitle = category.querySelector('.category-title').textContent.trim().toLowerCase(); // Get the category title
 
                     // Check if the search value matches the question, answer, or category title

@@ -17,52 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Admin mode toggle and editing functionality
-    let isAdmin = false;
-    const editButtons = document.querySelectorAll('.edit-btn');
-    const toggleAdminButton = document.getElementById('toggle-admin');
-
-    if (toggleAdminButton) {
-        toggleAdminButton.addEventListener('click', function () {
-            isAdmin = !isAdmin;
-            editButtons.forEach(button => {
-                button.style.display = isAdmin ? 'block' : 'none';
-            });
-        });
-    }
-
-    editButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const faqItem = this.closest('.faq-item');
-            const question = faqItem.querySelector('.question');
-            const answer = faqItem.querySelector('.answer p');
-
-            const isEditing = faqItem.classList.toggle('editing');
-
-            if (isEditing) {
-                // Enable editing
-                question.contentEditable = true;
-                question.classList.add('input-field');
-                const answerTextarea = document.createElement('textarea');
-                answerTextarea.classList.add('input-field');
-                answerTextarea.value = answer.textContent;
-                faqItem.querySelector('.answer').replaceChild(answerTextarea, answer);
-
-                this.textContent = 'حفظ';
-            } else {
-                // Save changes
-                question.contentEditable = false;
-                question.classList.remove('input-field');
-                const updatedAnswer = faqItem.querySelector('.answer textarea').value;
-                const updatedAnswerP = document.createElement('p');
-                updatedAnswerP.textContent = updatedAnswer;
-                faqItem.querySelector('.answer').replaceChild(updatedAnswerP, faqItem.querySelector('.answer textarea'));
-
-                this.textContent = 'تعديل';
-            }
-        });
-    });
-
     // Search functionality
     const searchInput = document.getElementById('search-input');
     if (searchInput) {

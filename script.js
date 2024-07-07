@@ -58,4 +58,64 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         console.error('Search input element not found');
     }
+
+    // Function to load the custom Arabic font
+    function loadArabicFont() {
+        const fontUrl = 'Amiri-Regular.ttf'; // Replace with the URL to your custom Arabic font
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', fontUrl, true);
+        xhr.responseType = 'arraybuffer';
+
+        xhr.onload = function () {
+            const uint8Array = new Uint8Array(this.response);
+            jsPDF.API.addFileToVFS('Amiri-Regular.ttf', uint8Array);
+            jsPDF.API.addFont('Amiri-Regular.ttf', 'Amiri', 'normal');
+        };
+
+        xhr.send();
+    }
+
+    loadArabicFont();
+
+
+    const { jsPDF } = window.jspdf;
+
+    function exportToPDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4', });
+    
+        const categories = document.querySelectorAll('section');
+    
+        let yOffset = 10;
+        categories.forEach((category, categoryIndex) => {
+            const categoryTitle = category.querySelector('.category-title').textContent;
+            doc.setFont('Amiri', 'normal');
+            doc.setFontSize(12);
+            doc.setTextColor(0, 0, 0);
+            doc.text(categoryTitle, 10, yOffset, { align: 'right' });
+    
+            const faqItems = category.querySelectorAll('.faq-item');
+            faqItems.forEach((item, index) => {
+                const question = item.querySelector('.question').textContent;
+                const answer = item.querySelector('.answer').textContent;
+    
+                yOffset += 10;
+                doc.text(`${question}: ${answer}`, 10, yOffset, { align: 'right' });
+    
+                if (yOffset > 270) {
+                    doc.addPage();
+                    yOffset = 10;
+                }
+            });
+    
+            yOffset += 10;
+        });
+    
+        doc.save('FAQ.pdf');
+    }
+    
+
+    document.getElementById('export-pdf').addEventListener('click', exportToPDF);
+    
 });
